@@ -3,6 +3,8 @@
     <style>
         html {
             font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
         }
         header {
             text-align: center;
@@ -14,7 +16,7 @@
             max-width: 700px;
             padding: 20px;
         }
-        input[type=text], select {
+        input[type=text], select, textarea, button {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0px 1.25rem 0px;
@@ -33,10 +35,37 @@
             box-sizing: border-box;
         }
         .radio-label {
+            font-size: 14px;
             display:flex;
             align-items: center;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
+        }
+        .checkbox-label {
+            font-size: 14px;
+            display:flex;
+            align-items: center;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        #comments {
+            resize: vertical;
+            min-height: 80px;
+            padding: 0.7rem;
+        }
+        .submit-button {
+            display: block;
+            border: none;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: lightblue;
+            font-size: 20px;
+            transition-duration: 0.4s;
+            cursor:pointer;
+        }
+        .submit-button:hover {
+            background-color:rgb(19, 97, 122);
+            color:whitesmoke;
         }
     </style>
     <head>
@@ -48,15 +77,15 @@
             <p id="description">This form will help you buy more glass.</p>
         </header>
         <article>
-            <form action="/test">
-                <label for="name">Name</label>
+            <form id="survey-form" action="/test">
+                <label for="name" id="name-label">Name</label>
                 <input type="text" id="name" name="name" placeholder="enter your name">
-                <label for="email">Email</label>
+                <label for="email" id="email-label">Email</label>
                 <input type="text" id="email" name="email" placeholder="enter your email">
-                <label for="number">Number of panes</label>
+                <label for="number" id="number-label">Number of panes</label>
                 <input type="number" id="number" name="number" placeholder ="# of panes" min ="1" max ="100">
-                <label for="glass-type">Type of glass</label>
-                <select id="glass-type" name="glass-type">
+                <label for="dropdown">Type of glass</label>
+                <select id="dropdown" name="dropdown">
                     <option value="window">Window</option>
                     <option value="washroom">Washroom</option>
                     <option value="panel">Panel</option>
@@ -71,6 +100,35 @@
                     <input type="radio" id="new-customer" name="new-customer" value="no">
                     No
                 </label>
+                <label for="checkbox">Where did you hear about us?</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="yelp">
+                    Yelp
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="google-maps">
+                    Google Maps
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="reddit">
+                    Reddit
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="twitter">
+                    Twitter
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="friend">
+                    Friend
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="checkbox" name="checkbox" value="tv-ad">
+                    TV Ad
+                </label>
+                <label for="textarea">Additional comments</label>
+                <br>
+                <textarea id="comments" name="comments" placeholder="additional comments..."></textarea>
+                <button id="submit" class="submit-button" type="submit">Submit</button>
             </form>
         </article>
         <footer>
