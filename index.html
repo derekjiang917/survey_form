@@ -5,16 +5,32 @@
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             font-size: 16px;
             font-weight: 400;
+            background-image: url("glass.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        body {
+            background-color: rgba(41, 40, 40, 0.76);
+            border-radius: 5px;
+            margin: 20px auto 20px auto;
+            padding: 20px;
+            max-width: 800px;
         }
         header {
             text-align: center;
+            color: rgb(235, 235, 235);
+            text-shadow: 0px 0px 15px rgb(27, 27, 27);
         }
         article {
             margin: auto;
-            border: 5px solid #bbb;
-            border-radius: 5px;
+            border: 5px;
+            border-radius: 10px;
             max-width: 700px;
             padding: 20px;
+            background-color: rgba(41, 40, 40, 0.76);
+            color:whitesmoke;
         }
         input[type=text], input[type=number], input[type=email], select, textarea, button {
             width: 100%;
@@ -58,17 +74,35 @@
             background-color:rgb(19, 97, 122);
             color:whitesmoke;
         }
+        footer {
+            text-align: center;
+            margin: 5px;
+        }
+        #github {
+            color:whitesmoke;
+            text-shadow: 2px 2px 20px #000;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            background-color: rgba(25, 28, 31, 0.678);
+            border-radius: 2px;
+            padding: 2px;
+        }
+        #github:hover {
+            text-align: center;
+            color:lightblue;
+            text-shadow: 2px 2px 20px #000;
+        }
     </style>
     <head>
         <title>Big V's Glass Emporium</title>
     </head>
     <body>
         <header>
-            <h1 id="title">Big V's Glass Emporium Glass Order Form!</h1>
-            <p id="description">This form will help you buy more glass.</p>
+            <h1 id="title" class="test">Big V's Glass Emporium Order Form</h1>
+            <p id="description" class="test">This form will help you buy more glass.</p>
         </header>
         <article>
-            <form id="survey-form" action="">
+            <form id="survey-form" action="/thanks.html">
                 <label for="name" id="name-label">Name</label>
                 <input type="text" id="name" name="name" placeholder="enter your name" required="">
                 <label for="email" id="email-label">Email</label>
@@ -123,7 +157,7 @@
             </form>
         </article>
         <footer>
-            Made by Derek Jiang
+            <a href="https://github.com/derekjiang917" id="github">Made by Derek Jiang</a>
         </footer>
     </body>
 </html>
