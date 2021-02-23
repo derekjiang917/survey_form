@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header {
+            text-align: center;
+        }
+        article {
+            display: flex;
+            margin: auto;
+            border-style: solid;
+            border-width: 5px;
+            max-width: 700px;
+            padding: 20px;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0px 1.25rem 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+    <head>
+        <title>Form!</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Please Fill!</h1>
+            <p id="description">This form will help you buy more glass.</p>
+        </header>
+        <article>
+            <form action="/test">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="enter your name">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="enter your email">
+            </form>
+        </article>
+        <footer>
+            Made by Derek Jiang
+        </footer>
+    </body>
+</html>
