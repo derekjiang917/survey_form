@@ -16,16 +16,7 @@
             max-width: 700px;
             padding: 20px;
         }
-        input[type=text], select, textarea, button {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0px 1.25rem 0px;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type=number] {
+        input[type=text], input[type=number], input[type=email], select, textarea, button {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0px 1.25rem 0px;
@@ -77,13 +68,13 @@
             <p id="description">This form will help you buy more glass.</p>
         </header>
         <article>
-            <form id="survey-form" action="/test">
+            <form id="survey-form" action="">
                 <label for="name" id="name-label">Name</label>
-                <input type="text" id="name" name="name" placeholder="enter your name">
+                <input type="text" id="name" name="name" placeholder="enter your name" required="">
                 <label for="email" id="email-label">Email</label>
-                <input type="text" id="email" name="email" placeholder="enter your email">
+                <input type="email" id="email" name="email" placeholder="enter your email" required="">
                 <label for="number" id="number-label">Number of panes</label>
-                <input type="number" id="number" name="number" placeholder ="# of panes" min ="1" max ="100">
+                <input type="number" id="number" name="number" placeholder ="# of panes" min ="1" max ="100" required="">
                 <label for="dropdown">Type of glass</label>
                 <select id="dropdown" name="dropdown">
                     <option value="window">Window</option>
@@ -93,7 +84,7 @@
                 </select>
                 <label for="new-customer">Are you a new customer?</label>
                 <label class="radio-label">
-                    <input type="radio" id="new-customer" name="new-customer" value="yes">
+                    <input type="radio" id="new-customer" name="new-customer" value="yes" checked>
                     Yes
                 </label>
                 <label class="radio-label">
@@ -125,7 +116,7 @@
                     <input type="checkbox" id="checkbox" name="checkbox" value="tv-ad">
                     TV Ad
                 </label>
-                <label for="textarea">Additional comments</label>
+                <label for="textarea">Additional comments (optional)</label>
                 <br>
                 <textarea id="comments" name="comments" placeholder="additional comments..."></textarea>
                 <button id="submit" class="submit-button" type="submit">Submit</button>
