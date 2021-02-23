@@ -8,14 +8,22 @@
             text-align: center;
         }
         article {
-            display: flex;
             margin: auto;
-            border-style: solid;
-            border-width: 5px;
+            border: 5px solid #bbb;
+            border-radius: 5px;
             max-width: 700px;
             padding: 20px;
         }
-        input[type=text] {
+        input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0px 1.25rem 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type=number] {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0px 1.25rem 0px;
@@ -39,6 +47,15 @@
                 <input type="text" id="name" name="name" placeholder="enter your name">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" placeholder="enter your email">
+                <label for="ordersize">Number of panes</label>
+                <input type="number" id="ordersize" name="ordersize" placeholder ="# of panes" min ="1" max ="100">
+                <label for="glasstype">Type of glass</label>
+                <select id="glasstype" name="glasstype">
+                    <option value="window">Window</option>
+                    <option value="washroom">Washroom</option>
+                    <option value="panel">Panel</option>
+                    <option value="ceiling">Ceiling</option>
+                </select>
             </form>
         </article>
         <footer>
